@@ -5,8 +5,11 @@ define(
     function(dummyLib) {
         
         var run = function() {
-            test('dummyLib should return the two strings combined together.', function() {
-                equal(dummyLib('a','b'), 'ab', 'The return should be "ab".');
+            asyncTest('dummyLib should return the two strings combined together.', function() {
+                setTimeout(function(){
+                    equal(dummyLib('a','b'), 'ab', 'The return should be "ab".');
+                    start();
+                }, 300)
             });
         };
         

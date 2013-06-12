@@ -23,9 +23,9 @@ require(
         // run the tests.
         dummyTest.run();
         dummyTest2.run();
-        
-        // start QUnit.
+          // start QUnit.
         QUnit.load();
         QUnit.start();
+      
     }
 );
